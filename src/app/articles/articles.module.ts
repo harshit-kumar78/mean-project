@@ -6,18 +6,15 @@ import { LatestArticlesComponent } from './latest-articles/latest-articles.compo
 import { FeaturedArticlesComponent } from './featured-articles/featured-articles.component';
 import { CategoriesComponent } from './categories/categories.component';
 
-
-
 @NgModule({
   declarations: [
     ArticleListsComponent,
     ArticleDetailsComponent,
     LatestArticlesComponent,
     FeaturedArticlesComponent,
-    CategoriesComponent
+    CategoriesComponent,
   ],
-  imports: [
-    CommonModule
-  ]
+  imports: [CommonModule],
+  exports: [LatestArticlesComponent],
 })
-export class ArticlesModule { }
+export class ArticlesModule {}
