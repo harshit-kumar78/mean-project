@@ -15,15 +15,10 @@ import { StaticpagesModule } from './staticpages/staticpages.module';
     FooterComponent,
     BannerComponent,
     HeaderComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ArticlesModule,
-    StaticpagesModule
-  ],
+  imports: [BrowserModule, ArticlesModule, StaticpagesModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
