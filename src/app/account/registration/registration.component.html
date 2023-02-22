@@ -7,7 +7,7 @@
           <div class="alert alert-success" *ngIf="datasaved">
             {{ massage }}
           </div>
-          <form (ngsubmit)="onSubmit()" [formGroup]="regForm">
+          <form (ngSubmit)="onSubmit()" [formGroup]="regForm">
             <div class="form-group form-row">
               <label class="col-md-3"
                 >Name : <span class="required">*</span></label
@@ -15,15 +15,16 @@
               <div class="col-md-9">
                 <input
                   type="text"
-                  formcontrolname="Name"
+                  formControlName="Name"
                   class="form-control"
                   placeholder="Name"
-                  required=""
                 />
-                <span
-                  *ngif="!regForm.get('Name') &amp;&amp; regForm.get('Name').touched"
+                <!-- <span
+                  *ngIf="
+                    !regForm.get('Name').valid && regForm.get('Name').touched
+                  "
                   >Please enter Your Name !!!</span
-                >
+                > -->
               </div>
             </div>
 
@@ -34,15 +35,16 @@
               <div class="col-md-9">
                 <input
                   type="text"
-                  formcontrolname="Email"
+                  formControlName="Email"
                   class="form-control"
                   placeholder="Email Id"
-                  required=""
                 />
-                <span
-                  *ngif="!regForm.get('Email') &amp;&amp; regForm.get('Email').touched"
+                <!-- <span
+                  *ngIf="
+                    !regForm.get('Email').valid && regForm.get('Email').touched
+                  "
                   >Please enter Email !!!</span
-                >
+                > -->
               </div>
             </div>
             <div class="form-group form-row">
@@ -52,26 +54,22 @@
               <div class="col-md-9">
                 <input
                   type="password"
-                  formcontrolname="Password"
+                  formControlName="Password"
                   class="form-control"
                   placeholder="Password"
-                  required=""
                 />
-                <span
-                  *ngif="!regForm.get('Password') &amp;&amp; regForm.get('Password').touched"
+                <!-- <span
+                  *ngIf="
+                    !regForm.get('Password').valid &&
+                    regForm.get('Password').touched
+                  "
                   >Please enter Password !!!</span
-                >
+                > -->
               </div>
             </div>
 
             <div class="form-group">
-              <button
-                type="submit"
-                [disabled]="!regForm"
-                class="btn btn-primary"
-              >
-                Submit
-              </button>
+              <button type="submit" class="btn btn-primary">Submit</button>
             </div>
           </form>
         </div>

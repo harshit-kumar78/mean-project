@@ -29,7 +29,8 @@ export class RegistrationComponent implements OnInit {
 
   onSubmit() {
     let userinfo = this.regForm.value;
-    //console.log(userinfo);
+    console.log(userinfo);
+
     this.createuserAccount(userinfo);
     this.regForm.reset();
   }
