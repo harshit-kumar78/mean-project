@@ -31,7 +31,7 @@ router.post("/register", function (req, res, next) {
     .save()
     .then((doc) => {
       res.status(201).json({
-        message: "Inserted Successfully",
+        msg: "Inserted Successfully",
         results: doc,
       });
     })

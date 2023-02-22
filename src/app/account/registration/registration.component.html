@@ -19,12 +19,12 @@
                   class="form-control"
                   placeholder="Name"
                 />
-                <!-- <span
+                <span
                   *ngIf="
-                    !regForm.get('Name').valid && regForm.get('Name').touched
+                    !regForm.get('Name')?.valid && regForm.get('Name')?.touched
                   "
                   >Please enter Your Name !!!</span
-                > -->
+                >
               </div>
             </div>
 
@@ -39,12 +39,13 @@
                   class="form-control"
                   placeholder="Email Id"
                 />
-                <!-- <span
+                <span
                   *ngIf="
-                    !regForm.get('Email').valid && regForm.get('Email').touched
+                    !regForm.get('Email')?.valid &&
+                    regForm.get('Email')?.touched
                   "
                   >Please enter Email !!!</span
-                > -->
+                >
               </div>
             </div>
             <div class="form-group form-row">
@@ -58,13 +59,13 @@
                   class="form-control"
                   placeholder="Password"
                 />
-                <!-- <span
+                <span
                   *ngIf="
-                    !regForm.get('Password').valid &&
-                    regForm.get('Password').touched
+                    !regForm.get('Password')?.valid &&
+                    regForm.get('Password')?.touched
                   "
                   >Please enter Password !!!</span
-                > -->
+                >
               </div>
             </div>
 

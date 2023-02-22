@@ -9,7 +9,7 @@ import { Accountinfo } from './accountinfo';
 export class AccountserviceService {
   url = 'http://localhost:3000/';
   constructor(private http: HttpClient) {}
-  createaccount(accinfo: Accountinfo): Observable<Accountinfo> {
-    return this.http.post<Accountinfo>(this.url + 'api/register', accinfo);
+  createaccount(accinfo: any): Observable<any> {
+    return this.http.post<any>(this.url + 'api/register', accinfo);
   }
 }
